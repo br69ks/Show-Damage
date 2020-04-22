@@ -120,24 +120,5 @@ You can now give access to each type of weapons (pistols, rifles, snipers, etc..
 - Steam_ID;
 - Public;
 
-## Changelogs
-#### v1.3
-- Updated Translations;
-- Changed all CVARS;
-- Removed all `drapi` folders;
-```
-#### v1.1.2
-- Personal Timer for showind damage. Should reduce the HUD time display;
-
-#### v1.1.1
-- Fixed a error log.
-
-#### v1.1.0
-- added config file to set the access of type of weapons;
-
-#### v1.0.1
-- Added clients preferences;
-- Added some translations sentences;
-```
 ## Credits
 - [Dr. API](https://forums.alliedmods.net/member.php?u=259137) - Modified from yours [Fork](https://forums.alliedmods.net/showthread.php?t=264427);

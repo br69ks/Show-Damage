@@ -1,6 +1,4 @@
 # Show Damage
-
-## Description
 Will show the damage on the Hint(HUD). 
 Will show you the damage, armor and the part of the body.
 For Molotov and Grenade you will get the total victim hurted with of course the damage and armor.
@@ -8,7 +6,7 @@ If you make a double, triple, or whatever kills you will get total victim hurted
 The time(reset) between each kill is set by type of weapons(pistols, snipers, rifles...) and this timer can be set with cvars.
 For the clients preferences type !sd in chat.
 
-### Cvars
+## Cvars
 - `show_damage_sniper_time` - SNIPERS Time Between shots;
 - `show_damage_mg_time` - MACHINES GUNS Time Between shots;
 - `show_damage_rifle_time` - RIFLES Time Between shots;
@@ -18,7 +16,7 @@ For the clients preferences type !sd in chat.
 
 If you set a high value time the damage, armor and victim on the HUD will increase. 0.5s between it's enough to get double, triple... kills instant. If you shot the same victim twice it's count like one so don't worry if you set high value time.
 
-### Configs
+## Configs
 ```
 "ShowDamage"
 {
@@ -119,8 +117,8 @@ You can now give access to each type of weapons (pistols, rifles, snipers, etc..
 - Steam_ID;
 - Public;
 
-### Changelogs
-v1.3
+## Changelogs
+##### v1.3
 - Updated Translations;
 - Changed all CVARS;
 - Removed all `drapi` folders;
@@ -138,5 +136,5 @@ v1.0.1
 - Added clients preferences;
 - Added some translations sentences;
 
-### Credits
+## Credits
 - [Dr. API](https://forums.alliedmods.net/member.php?u=259137) - Modified from yours [Fork](https://forums.alliedmods.net/showthread.php?t=264427);

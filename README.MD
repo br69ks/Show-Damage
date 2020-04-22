@@ -1,4 +1,6 @@
-### Description
+# Show Damage
+
+## Description
 Will show the damage on the Hint(HUD). 
 Will show you the damage, armor and the part of the body.
 For Molotov and Grenade you will get the total victim hurted with of course the damage and armor.
@@ -119,9 +121,9 @@ You can now give access to each type of weapons (pistols, rifles, snipers, etc..
 
 ### Changelogs
 v1.3
-- Atualizado as Traduções;
-- Alterado todas CVARS;
-- Removido todas as pastas `drapi`;
+- Updated Translations;
+- Changed all CVARS;
+- Removed all `drapi` folders;
 
 v1.1.2
 - Personal Timer for showind damage. Should reduce the HUD time display;
@@ -137,4 +139,4 @@ v1.0.1
 - Added some translations sentences;
 
 ### Credits
-- [Dr. API](https://forums.alliedmods.net/member.php?u=259137) - Modified from yours (Fork)[https://forums.alliedmods.net/showthread.php?t=264427];
+- [Dr. API](https://forums.alliedmods.net/member.php?u=259137) - Modified from yours [Fork](https://forums.alliedmods.net/showthread.php?t=264427);

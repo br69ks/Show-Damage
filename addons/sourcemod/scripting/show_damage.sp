@@ -76,11 +76,11 @@ int max_show_damage_steamid[MAX_SHOW_DAMAGE_STEAMID];
 //Informations plugin
 public Plugin myinfo =
 {
-	name = "Show Damage",
+	name = "[ZK Servidores™] - Show Damage",
 	author = "Dr. Api - Edited: crashzk",
 	description = "Show damage",
 	version = PLUGIN_VERSION,
-	url = ""
+	url = "https://github.com/crashzk/Show-Damage"
 }
 
 /***********************************************************/
@@ -111,7 +111,7 @@ public void OnPluginStart()
 	RegAdminCmd("sm_array", Command_Array, ADMFLAG_CHANGEMAP, "");	
 	RegConsoleCmd("sm_sd", Command_BuildMenuShowDamage, "");
 	
-	Cookie_ShowDamage 					= RegClientCookie("Cookie_ShowDamage", "", CookieAccess_Private);
+	Cookie_ShowDamage = RegClientCookie("Cookie_ShowDamage", "", CookieAccess_Private);
 	int info;
 	SetCookieMenuItem(ShowDamageCookieHandler, info, "Show Damage");
 		
@@ -155,6 +155,7 @@ public void OnPluginEnd()
 		i++;
 	}
 }
+
 /***********************************************************/
 /******************** WHEN CVAR CHANGED ********************/
 /***********************************************************/
@@ -232,6 +233,7 @@ public void OnClientCookiesCached(int client)
 		C_ShowDamage[client] = 1;
 	}
 }
+
 /***********************************************************/
 /******************* WHEN CONFIG EXECUTED ******************/
 /***********************************************************/
@@ -730,6 +732,7 @@ bool CheckAccessShowDamage(int client, int type)
 			return false;
 		}
 }
+
 /***********************************************************/
 /********************** LOAD SETTINGS **********************/
 /***********************************************************/

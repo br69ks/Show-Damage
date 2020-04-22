@@ -6,9 +6,6 @@ If you make a double, triple, or whatever kills you will get total victim hurted
 The time(reset) between each kill is set by type of weapons(pistols, snipers, rifles...) and this timer can be set with cvars.
 For the clients preferences type !sd in chat.
 
-## Commads
-- `sm_sd` - ;
-
 ## Cvars
 - `show_damage_sniper_time` - SNIPERS Time Between shots;
 - `show_damage_mg_time` - MACHINES GUNS Time Between shots;

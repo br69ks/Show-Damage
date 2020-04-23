@@ -116,7 +116,7 @@
 	{
 		"#format"		"{1:s},{2:i},{3:i}"
        	"en"			"<font color='#993300'>{1}</font>\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
-		"pt"			"<font color='#993300'>{1}</font>\nSaúde: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
+		"pt"			"<font color='#993300'>{1}</font>\nVida: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
 		"fr"			"<font color='#993300'>{1}</font>\nVie: <font color='#336600'>-{2}</font> | Armure: <font color='#0066CC'>-{3}</font>"
 		"tr"			"<font color='#993300'>{1}</font>\nCan: <font color='#336600'>-{2}</font> | Zırh: <font color='#0066CC'>-{3}</font>"
 		"ru"			"<font color='#993300'>{1}</font>\nЗдоровье: <font color='#336600'>-{2}</font> | Броня: <font color='#0066CC'>-{3}</font>"
@@ -125,7 +125,7 @@
 	{
 		"#format"		"{1:i},{2:i}"
        	"en"			"Health: <font color='#336600'>-{1}</font> | Armor: <font color='#0066CC'>-{2}</font>"
-		"pt"			"Saúde: <font color='#336600'>-{1}</font> | Colete: <font color='#0066CC'>-{2}</font>"
+		"pt"			"Vida: <font color='#336600'>-{1}</font> | Colete: <font color='#0066CC'>-{2}</font>"
 		"fr"			"Vie: <font color='#336600'>-{1}</font> | Armure: <font color='#0066CC'>-{2}</font>"
 		"tr"			"Can: <font color='#336600'>-{1}</font> | Zırh: <font color='#0066CC'>-{2}</font>"
 		"ru"			"Здоровье: <font color='#336600'>-{1}</font> | Броня: <font color='#0066CC'>-{2}</font>"
@@ -134,7 +134,7 @@
 	{
 		"#format"		"{1:i},{2:i},{3:i}"
        	"en"			"Total <font color='#993300'>Molotov</font> damage\nVictims: <font color='#800000'>{1}</font>\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
-		"pt"			"Total <font color='#993300'>Molotov</font> damage\nVítimas: <font color='#800000'>{1}</font>\nSaúde: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
+		"pt"			"Total <font color='#993300'>Molotov</font> damage\nVítimas: <font color='#800000'>{1}</font>\nVida: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
 		"fr"			"Total des dommages de la <font color='#993300'>Molotov</font>\nVictimes: <font color='#800000'>{1}</font>\nVie: <font color='#336600'>-{2}</font> | Armure: <font color='#0066CC'>-{3}</font>"
 		"tr"			"Toplam <font color='#993300'>Molotof</font> hasarı\nEtkilenenler: <font color='#800000'>{1}</font>\nCan: <font color='#336600'>-{2}</font> | Zırh: <font color='#0066CC'>-{3}</font>"
 		"ru"			"Всего <font color='#993300'>молотов</font> нанес урона\nЖертв: <font color='#800000'>{1}</font>\nЗдоровье: <font color='#336600'>-{2}</font> | Броня: <font color='#0066CC'>-{3}</font>"
@@ -143,7 +143,7 @@
 	{
 		"#format"		"{1:i},{2:i},{3:i}"
        	"en"			"Total <font color='#993300'>HE Grenade</font> damage\nVictims: <font color='#800000'>{1}</font>\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
-		"pt"			"Total <font color='#993300'>HE Granada</font> damage\nVítimas: <font color='#800000'>{1}</font>\nSaúde: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
+		"pt"			"Total <font color='#993300'>HE Granada</font> damage\nVítimas: <font color='#800000'>{1}</font>\nVida: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
 		"fr"			"Total des dommages de la <font color='#993300'>Grenade</font>\nVictimes: <font color='#800000'>{1}</font>\nVie: <font color='#336600'>-{2}</font> | Armure: <font color='#0066CC'>-{3}</font>"
 		"tr"			"Toplam <font color='#993300'>El Bombası</font> hasar\nEtkilenenler: <font color='#800000'>{1}</font>\nCan: <font color='#336600'>-{2}</font> | Zırh: <font color='#0066CC'>-{3}</font>"
 		"ru"			"Всего <font color='#993300'>граната</font> нанесла урона\nЖертв: <font color='#800000'>{1}</font>\nЗдоровье: <font color='#336600'>-{2}</font> | Броня: <font color='#0066CC'>-{3}</font>"
@@ -152,7 +152,7 @@
 	{
 		"#format"		"{1:s},{2:i},{3:i},{4:i}"
        	"en"			"Total <font color='#993300'>{1}</font> Damage\nVictims: <font color='#800000'>{2}</font>\nHealth: <font color='#336600'>-{3}</font> | Armor: <font color='#0066CC'>-{4}</font>"
-		"pt"			"Dano <font color='#993300'>{1}</font> Total\nVítimas: <font color='#800000'>{2}</font>\nSaúde: <font color='#336600'>-{3}</font> | Colete: <font color='#0066CC'>-{4}</font>"
+		"pt"			"Dano <font color='#993300'>{1}</font> Total\nVítimas: <font color='#800000'>{2}</font>\nVida: <font color='#336600'>-{3}</font> | Colete: <font color='#0066CC'>-{4}</font>"
 		"fr"			"Total des dommages <font color='#993300'>{1}</font>\nVictimes: <font color='#800000'>{2}</font>\nVie: <font color='#336600'>-{3}</font> |  Armure: <font color='#0066CC'>-{4}</font>"
 		"tr"			"Toplam <font color='#993300'>{1}</font> Hasar\nEtkilenenler: <font color='#800000'>{2}</font>\nCan: <font color='#336600'>-{3}</font> | Zırh: <font color='#0066CC'>-{4}</font>"
 		"ru"			"Всего <font color='#993300'>{1}</font> нанесено урона\nЖертв: <font color='#800000'>{2}</font>\nЗдоровье: <font color='#336600'>-{3}</font> | Броня: <font color='#0066CC'>-{4}</font>"

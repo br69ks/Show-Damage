@@ -4,7 +4,7 @@ Will show the damage on the Hint (HUD).
 - Will show you the damage, armor and the part of the body;
 - For Molotov and Grenade you will get the total victim hurted with of course the damage and armor;
 - If you make a double, triple, or whatever kills you will get total victim hurted with of course the damage and armor;
-- The time ***(reset)*** between each kill is set by type of weapons(pistols, snipers, rifles...) and this timer can be set with cvars;
+- The time ***(reset)*** between each kill is set by type of weapons ***(pistols, snipers, rifles...)*** and this timer can be set with cvars;
 
 ## Commands
 - `sm_sd` - For the clients preferences;

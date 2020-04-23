@@ -3,12 +3,12 @@
 //***********************************//
 //*************DEFINE****************//
 //***********************************//
-#define CVARS 									FCVAR_SPONLY|FCVAR_REPLICATED|FCVAR_NOTIFY
-#define DEFAULT_FLAGS 							FCVAR_NOTIFY
-#define TAG_CHAT 								"[SHOW DAMAGE] - "
-#define PLUGIN_VERSION							"1.3"
-#define MAX_TYPE_WEAPONS						10
-#define MAX_SHOW_DAMAGE_STEAMID					25
+#define CVARS 						FCVAR_SPONLY|FCVAR_REPLICATED|FCVAR_NOTIFY
+#define DEFAULT_FLAGS 				FCVAR_NOTIFY
+#define TAG_CHAT 					"[SHOW DAMAGE] - "
+#define PLUGIN_VERSION				"1.3"
+#define MAX_TYPE_WEAPONS			10
+#define MAX_SHOW_DAMAGE_STEAMID		25
 
 //***********************************//
 //*************INCLUDE***************//
@@ -42,8 +42,8 @@ Handle Cookie_ShowDamage;
 Handle Timer_ShowDamage[MAXPLAYERS + 1];
 
 //Bool
-bool B_active_show_damage 					= false;
-bool B_active_show_damage_dev				= false;
+bool B_active_show_damage 		= false;
+bool B_active_show_damage_dev	= false;
 
 bool B_ShowDamage_SteamID[MAXPLAYERS+1][MAX_TYPE_WEAPONS];
 
@@ -65,7 +65,7 @@ char S_showdamageflag[MAX_TYPE_WEAPONS][64];
 char S_showdamagesteamid[MAX_TYPE_WEAPONS][MAX_SHOW_DAMAGE_STEAMID][64];
 
 //Cutstom
-int C_CountVictim[MAXPLAYERS + 1]			= 1;
+int C_CountVictim[MAXPLAYERS + 1]	= 1;
 int C_TotalDamage[MAXPLAYERS + 1];
 int C_TotalDamageArmor[MAXPLAYERS + 1];
 C_ShowDamage[MAXPLAYERS + 1];

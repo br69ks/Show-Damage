@@ -1,6 +1,5 @@
 # Show Damage
 Will show the damage on the Hint (HUD).
-
 - Will show you the damage, armor and the part of the body;
 - For Molotov and Grenade you will get the total victim hurted with of course the damage and armor;
 - If you make a double, triple, or whatever kills you will get total victim hurted with of course the damage and armor;

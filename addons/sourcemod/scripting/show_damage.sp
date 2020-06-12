@@ -73,14 +73,14 @@ C_ShowDamage[MAXPLAYERS + 1];
 int max_type_weapons;
 int max_show_damage_steamid[MAX_SHOW_DAMAGE_STEAMID];
 
-//Informations plugin
+//Informations Plugin
 public Plugin myinfo =
 {
 	name = "[ZK Servidores™] - Show Damage",
-	author = "Dr. Api - Edited: crashzk",
+	author = "Dr. Api, crashzk",
 	description = "Show damage",
 	version = PLUGIN_VERSION,
-	url = "https://github.com/crashzk/Show-Damage"
+	url = "https://github.com/zkservidores-clientes"
 }
 
 /***********************************************************/

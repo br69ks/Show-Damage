@@ -76,7 +76,7 @@ int max_show_damage_steamid[MAX_SHOW_DAMAGE_STEAMID];
 //Informations Plugin
 public Plugin myinfo =
 {
-	name = "[ZK Servidores™] - Show Damage",
+	name = "[ZK Servidores™] Show Damage HUD",
 	author = "Dr. Api, crashzk",
 	description = "Show damage",
 	version = PLUGIN_VERSION,

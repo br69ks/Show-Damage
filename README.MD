@@ -121,3 +121,5 @@ You can now give access to each type of weapons (pistols, rifles, snipers, etc..
 
 ## Credits
 - [Dr. API](https://forums.alliedmods.net/member.php?u=259137) - Modified from yours [Fork](https://forums.alliedmods.net/showthread.php?t=264427);
+- [crashzk](https://github.com/crashzk) - Fix small errors;
+

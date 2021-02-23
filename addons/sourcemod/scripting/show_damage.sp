@@ -17,7 +17,7 @@
 #undef REQUIRE_PLUGIN
 #include <sourcemod>
 #include <clientprefs>
-#include <autoexecconfig>
+#include <autoexec>
 
 #pragma newdecls required
 
@@ -38,6 +38,7 @@ Handle cvar_show_damage_pistol_time;
 
 Handle Array_Victim[MAXPLAYERS + 1];
 Handle Cookie_ShowDamage;
+Handle Cookie_ShowDamageType;
 
 Handle Timer_ShowDamage[MAXPLAYERS + 1];
 
@@ -69,6 +70,7 @@ int C_CountVictim[MAXPLAYERS + 1]	= 1;
 int C_TotalDamage[MAXPLAYERS + 1];
 int C_TotalDamageArmor[MAXPLAYERS + 1];
 C_ShowDamage[MAXPLAYERS + 1];
+C_ShowDamageType[MAXPLAYERS + 1];
 
 int max_type_weapons;
 int max_show_damage_steamid[MAX_SHOW_DAMAGE_STEAMID];
@@ -112,6 +114,7 @@ public void OnPluginStart()
 	RegConsoleCmd("sm_sd", Command_BuildMenuShowDamage, "");
 	
 	Cookie_ShowDamage = RegClientCookie("Cookie_ShowDamage", "", CookieAccess_Private);
+	Cookie_ShowDamageType = RegClientCookie("Cookie_ShowDamageType", "", CookieAccess_Private);
 	int info;
 	SetCookieMenuItem(ShowDamageCookieHandler, info, "Show Damage");
 		
@@ -222,6 +225,7 @@ public void OnClientDisconnect(int client)
 public void OnClientCookiesCached(int client)
 {
 	char value[16];
+	char value2[16];
 	
 	GetClientCookie(client, Cookie_ShowDamage, value, sizeof(value));
 	if(strlen(value) > 0) 
@@ -231,6 +235,16 @@ public void OnClientCookiesCached(int client)
 	else 
 	{
 		C_ShowDamage[client] = 1;
+	}
+
+	GetClientCookie(client, Cookie_ShowDamageType, value2, sizeof(value2));
+	if(strlen(value2) > 0) 
+	{
+		C_ShowDamageType[client] = StringToInt(value2);
+	}
+	else 
+	{
+		C_ShowDamageType[client] = 1;
 	}
 }
 
@@ -343,13 +357,15 @@ public void ShowDamageCookieHandler(int client, CookieMenuAction action, any inf
 /***********************************************************/
 void BuildMenuShowDamage(int client)
 {
-	char title[40], show_damage[40], status_show_damage[40];
+	char title[40], show_damage[40], status_show_damage[40], show_damage_type[40], status_show_damage_type[40];
 	
 	Menu menu = CreateMenu(MenuShowDamageAction);
 	
 	Format(status_show_damage, sizeof(status_show_damage), "%T", (C_ShowDamage[client]) ? "Enabled" : "Disabled", client);
-	Format(show_damage, sizeof(show_damage), "%T", "ShowDamage_HUD_MENU_TITLE", client, status_show_damage);
+	Format(status_show_damage_type, sizeof(status_show_damage_type), "%T", (C_ShowDamageType[client]) ? "Center" : "HUD", client);
+	Format(show_damage, sizeof(show_damage), "%T, %T", "ShowDamage_HUD_MENU_TITLE", "ShowDamage_HUD_MENU_TITLE_2", client, status_show_damage, status_show_damage_type);
 	AddMenuItem(menu, "M_show_damage_hud", show_damage);
+	AddMenuItem(menu, "M_show_damage_hud_type", show_damage_type);
 	
 	Format(title, sizeof(title), "%T", "ShowDamage_TITLE", client);
 	menu.SetTitle(title);
@@ -385,6 +401,13 @@ public int MenuShowDamageAction(Menu menu, MenuAction action, int param1, int pa
 				C_ShowDamage[param1] = !C_ShowDamage[param1];
 				SetClientCookie(param1, Cookie_ShowDamage, (C_ShowDamage[param1]) ? "1" : "0");
 			}
+
+			if(StrEqual(menu1, "M_show_damage_hud_type"))
+			{
+				C_ShowDamageType[param1] = !C_ShowDamageType[param1];
+				SetClientCookie(param1, Cookie_ShowDamageType, (C_ShowDamageType[param1]) ? "1" : "0");
+			}
+
 			BuildMenuShowDamage(param1);
 		}
 	}
@@ -449,6 +472,7 @@ public Action Event_PlayerHurt(Handle event, char[] name, bool dontBroadcast)
 		int damage_health 	= GetEventInt(event, "dmg_health");	
 		int damage_armor 	= GetEventInt(event, "dmg_armor");
 		int hitgroup		= GetEventInt(event, "hitgroup");
+		int health			= GetEventInt(event, "health");
 		GetEventString(event, "weapon", S_weapon, sizeof(S_weapon));
 		
 		if(!C_ShowDamage[attacker]) return;
@@ -578,6 +602,7 @@ public Action Event_PlayerHurt(Handle event, char[] name, bool dontBroadcast)
 			WritePackCell(dataPackHandle, GetClientUserId(attacker));
 			WritePackCell(dataPackHandle, GetClientUserId(victim));
 			WritePackCell(dataPackHandle, hitgroup);
+			WritePackCell(dataPackHandle, health);
 			
 			//We check if the vicitm are the same and remove duplicate victim's id.
 			if(Array_Victim[attacker] == INVALID_HANDLE)
@@ -603,9 +628,25 @@ public Action TimerData_ShowDamage(Handle timer, Handle dataPackHandle)
 	int attacker 		= GetClientOfUserId(ReadPackCell(dataPackHandle));
 	int victim 			= GetClientOfUserId(ReadPackCell(dataPackHandle));
 	int hitgroup 		= ReadPackCell(dataPackHandle);
+	int health 			= ReadPackCell(dataPackHandle);
 	
 	Timer_ShowDamage[attacker] = INVALID_HANDLE;
-	ShowDamage(S_weapon, attacker, victim, hitgroup, C_CountVictim[attacker], C_TotalDamage[attacker], C_TotalDamageArmor[attacker]);
+	
+	switch (C_ShowDamageType[attacker])
+	{
+		case 0:
+		{
+			ShowDamage(S_weapon, attacker, victim, hitgroup, C_CountVictim[attacker], C_TotalDamage[attacker], C_TotalDamageArmor[attacker]);
+		}
+		case 1:
+		{
+			ShowDamage(S_weapon, attacker, victim, hitgroup, C_CountVictim[attacker], C_TotalDamage[attacker], C_TotalDamageArmor[attacker]);
+		}
+		case 2:
+		{
+			ShowDamageHud(attacker, victim, C_TotalDamage[attacker], health);
+		}
+	}
 	
 	//PrintToChat(attacker, "%s", S_weapon);
 	//PrintToChat(attacker, "%i, %N", C_CountVictim[attacker], victim);
@@ -615,6 +656,14 @@ public Action TimerData_ShowDamage(Handle timer, Handle dataPackHandle)
 /***********************************************************/
 /************************ SHOW DAMAGE **********************/
 /***********************************************************/
+void ShowDamageHud(int attacker, int victim, int damage_health, int health)
+{
+	SetHudTextParams(0.02, 0.05, 5.0, 255, 0, 0, 255, 1, 1.0, 0.5, 0.5);
+	ShowHudText(attacker, 1, " %N\n Damage: %i\n HP: %i", victim, damage_health, health);
+	
+	Timer_ShowDamage[attacker] = INVALID_HANDLE;
+}
+
 void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count, int damage_health, int damage_armor)
 {
 	//PrintToChat(attacker, "cookie:%i", C_show_damage[attacker]);

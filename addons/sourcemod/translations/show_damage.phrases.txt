@@ -23,6 +23,15 @@
 		"tr"			"Hasarı Göster: {1}"
 		"ru"			"Нанесенный урон: {1}"
 	}
+	"Show damage menu settings message 2"
+	{
+		"#format"		"{1:s}"
+		"en"			"Damage Type: {1}"
+		"pt"			"Damage Type: {1}"
+		"fr"			"Type de dommage: {1}"
+		"tr"			"Hasar Tipi: {1}"
+		"ru"			"Тип повреждения: {1}"
+	}
 	"Head"
 	{
         "en"			"Head"
@@ -94,7 +103,19 @@
 		"fr"			"Désactivé"
 		"tr"			"Kapalı"
 		"ru"			"Выключено"
-	}	
+	}
+	"Center"
+	{
+      	"en"			"Center"
+		"pt"			"Centro"
+		"fr"			"Centre"
+		"tr"			"Merkez"
+		"ru"			"Центр"
+	}
+	"HUD"
+	{
+      	"en"			"HUD"
+	}
 	"ShowDamage_TITLE"
 	{
       	"en"			"Menu: Show Damage"
@@ -111,7 +132,16 @@
 		"fr"			"Montrer les Dommages: {1}"
 		"tr"			"Hasarı Göster: {1}"
 		"ru"			"Нанесенный урон: {1}"
-	}	
+	}
+	"ShowDamage_HUD_MENU_TITLE_2"
+	{
+		"#format"		"{1:s}"
+		"en"			"Damage Type: {1}"
+		"pt"			"Damage Type: {1}"
+		"fr"			"Type de dommage: {1}"
+		"tr"			"Hasar Tipi: {1}"
+		"ru"			"Тип повреждения: {1}"
+	}
 	"Show damage hit message body"
 	{
 		"#format"		"{1:s},{2:i},{3:i}"

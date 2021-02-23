@@ -1,8 +1,8 @@
 # Show Damage
-Will show the damage on the Hint (HUD).
-- Will show you the damage, armor and the part of the body;
-- For Molotov and Grenade you will get the total victim hurted with of course the damage and armor;
-- If you make a double, triple, or whatever kills you will get total victim hurted with of course the damage and armor;
+Will show the damage on the Center and HUD (corner).
+- Will show you the damage, armor and the part of the body (Center), Show player name, damage, and hp left (HUD);
+- For Molotov and Grenade you will get the total victim hurted with of course the damage and armor (center);
+- If you make a double, triple, or whatever kills you will get total victim hurted with of course the damage and armor (center);
 - The time ***(reset)*** between each kill is set by type of weapons ***(pistols, snipers, rifles...)*** and this timer can be set with cvars;
 
 ## Commands
@@ -122,4 +122,5 @@ You can now give access to each type of weapons (pistols, rifles, snipers, etc..
 ## Credits
 - [Dr. API](https://forums.alliedmods.net/member.php?u=259137) - Modified from yours [Fork](https://forums.alliedmods.net/showthread.php?t=264427);
 - [crashzk](https://github.com/crashzk) - Fix small errors;
+- [brooks](https://github.com/br69ks) - Add HUD damage like ERA/EVIL;
 

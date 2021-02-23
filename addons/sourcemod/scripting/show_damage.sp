@@ -363,7 +363,8 @@ void BuildMenuShowDamage(int client)
 	
 	Format(status_show_damage, sizeof(status_show_damage), "%T", (C_ShowDamage[client]) ? "Enabled" : "Disabled", client);
 	Format(status_show_damage_type, sizeof(status_show_damage_type), "%T", (C_ShowDamageType[client]) ? "Center" : "HUD", client);
-	Format(show_damage, sizeof(show_damage), "%T, %T", "ShowDamage_HUD_MENU_TITLE", "ShowDamage_HUD_MENU_TITLE_2", client, status_show_damage, status_show_damage_type);
+	Format(show_damage, sizeof(show_damage), "%T", "ShowDamage_HUD_MENU_TITLE", client, status_show_damage);
+	Format(show_damage_type, sizeof(show_damage_type), "%T", "ShowDamage_HUD_MENU_TITLE_2", client, status_show_damage_type);
 	AddMenuItem(menu, "M_show_damage_hud", show_damage);
 	AddMenuItem(menu, "M_show_damage_hud_type", show_damage_type);
 	

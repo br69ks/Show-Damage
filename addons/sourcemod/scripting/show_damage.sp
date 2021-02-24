@@ -641,10 +641,6 @@ public Action TimerData_ShowDamage(Handle timer, Handle dataPackHandle)
 		}
 		case 1:
 		{
-			ShowDamage(S_weapon, attacker, victim, hitgroup, C_CountVictim[attacker], C_TotalDamage[attacker], C_TotalDamageArmor[attacker]);
-		}
-		case 2:
-		{
 			ShowDamageHud(attacker, victim, C_TotalDamage[attacker], health);
 		}
 	}

@@ -1,4 +1,4 @@
-##REQUIRES [THIS FIX](https://github.com/Franc1sco/FixHintColorMessages) FOR CSGO
+#REQUIRES [THIS FIX](https://github.com/Franc1sco/FixHintColorMessages) FOR CSGO
 # Show Damage
 Will show the damage on the Center and HUD (corner).
 - Will show you the damage, armor and the part of the body (Center), Show player name, damage, and hp left (HUD);

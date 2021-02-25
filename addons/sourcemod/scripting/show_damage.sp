@@ -366,7 +366,10 @@ void BuildMenuShowDamage(int client)
 	Format(show_damage, sizeof(show_damage), "%T", "ShowDamage_HUD_MENU_TITLE", client, status_show_damage);
 	Format(show_damage_type, sizeof(show_damage_type), "%T", "ShowDamage_HUD_MENU_TITLE_2", client, status_show_damage_type);
 	AddMenuItem(menu, "M_show_damage_hud", show_damage);
-	AddMenuItem(menu, "M_show_damage_hud_type", show_damage_type);
+	if (C_ShowDamage[client] == 1)
+	{
+		AddMenuItem(menu, "M_show_damage_hud_type", show_damage_type);
+	}
 	
 	Format(title, sizeof(title), "%T", "ShowDamage_TITLE", client);
 	menu.SetTitle(title);
@@ -641,7 +644,7 @@ public Action TimerData_ShowDamage(Handle timer, Handle dataPackHandle)
 		}
 		case 1:
 		{
-			ShowDamage(S_weapon, attacker, victim, hitgroup, C_CountVictim[attacker], C_TotalDamage[attacker], C_TotalDamageArmor[attacker]);
+			ShowDamage(S_weapon, attacker, victim, hitgroup, C_CountVictim[attacker], C_TotalDamage[attacker]);
 		}
 	}
 	
@@ -661,7 +664,7 @@ void ShowDamageHud(int attacker, int victim, int damage_health, int health)
 	Timer_ShowDamage[attacker] = INVALID_HANDLE;
 }
 
-void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count, int damage_health, int damage_armor)
+void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count, int damage_health)
 {
 	//PrintToChat(attacker, "cookie:%i", C_show_damage[attacker]);
 	/* hitgroup 0 = generic */
@@ -677,15 +680,15 @@ void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count
 	{
 		if(StrEqual(weapon, "inferno", false))
 		{
-			PrintHintText(attacker, "%t", "Show damage inferno", count, damage_health, damage_armor);
+			PrintHintText(attacker, "%t", "Show damage inferno", count, damage_health);
 		}
 		else if(StrEqual(weapon, "hegrenade", false))
 		{
-			PrintHintText(attacker, "%t", "Show damage hegrenade", count, damage_health, damage_armor);
+			PrintHintText(attacker, "%t", "Show damage hegrenade", count, damage_health);
 		}
 		else
 		{
-			PrintHintText(attacker, "%t", "Show damage multiple", weapon, count, damage_health, damage_armor);
+			PrintHintText(attacker, "%t", "Show damage multiple", weapon, count, damage_health);
 		}
 	}
 	else
@@ -738,11 +741,11 @@ void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count
 		{
 			if(strlen(S_hitgroup_message))
 			{
-				PrintHintText(attacker, "%t", "Show damage hit message body", S_hitgroup_message, damage_health, damage_armor);
+				PrintHintText(attacker, "%t", "Show damage hit message body", victim, damage_health);
 			}
 			else
 			{
-				PrintHintText(attacker, "%t", "Show damage hit message", damage_health, damage_armor);
+				PrintHintText(attacker, "%t", "Show damage hit message", victim, damage_health);
 			}
 		}
 	}

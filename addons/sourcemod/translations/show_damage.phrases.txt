@@ -145,11 +145,11 @@
 	"Show damage hit message body"
 	{
 		"#format"		"{1:s},{2:i},{3:i}"
-       	"en"			"<font color='#993300'>{1}</font>\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
-		"pt"			"<font color='#993300'>{1}</font>\nVida: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
-		"fr"			"<font color='#993300'>{1}</font>\nVie: <font color='#336600'>-{2}</font> | Armure: <font color='#0066CC'>-{3}</font>"
-		"tr"			"<font color='#993300'>{1}</font>\nCan: <font color='#336600'>-{2}</font> | Zırh: <font color='#0066CC'>-{3}</font>"
-		"ru"			"<font color='#993300'>{1}</font>\nЗдоровье: <font color='#336600'>-{2}</font> | Броня: <font color='#0066CC'>-{3}</font>"
+       	"en"			"<font color='#993300'>{1}</font>.\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
+		"pt"			"<font color='#993300'>{1}</font>.\nVida: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
+		"fr"			"<font color='#993300'>{1}</font>.\nVie: <font color='#336600'>-{2}</font> | Armure: <font color='#0066CC'>-{3}</font>"
+		"tr"			"<font color='#993300'>{1}</font>.\nCan: <font color='#336600'>-{2}</font> | Zırh: <font color='#0066CC'>-{3}</font>"
+		"ru"			"<font color='#993300'>{1}</font>.\nЗдоровье: <font color='#336600'>-{2}</font> | Броня: <font color='#0066CC'>-{3}</font>"
 	}	
 	"Show damage hit message"
 	{

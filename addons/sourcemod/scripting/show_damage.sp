@@ -645,7 +645,7 @@ public Action TimerData_ShowDamage(Handle timer, Handle dataPackHandle)
 		}
 		case 1:
 		{
-			ShowDamage(S_weapon, attacker, victim, hitgroup, C_CountVictim[attacker], C_TotalDamage[attacker]);
+			ShowDamage(S_weapon, attacker, victim, hitgroup, C_CountVictim[attacker], C_TotalDamage[attacker], C_TotalDamageArmor[attacker]);
 		}
 	}
 	
@@ -665,7 +665,7 @@ void ShowDamageHud(int attacker, int victim, int damage_health, int health)
 	Timer_ShowDamage[attacker] = INVALID_HANDLE;
 }
 
-void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count, int damage_health)
+void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count, int damage_health, int damage_armor)
 {
 	//PrintToChat(attacker, "cookie:%i", C_show_damage[attacker]);
 	/* hitgroup 0 = generic */
@@ -742,11 +742,11 @@ void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count
 		{
 			if(strlen(S_hitgroup_message))
 			{
-				PrintHintText(attacker, "%t", "Show damage hit message body", victim, damage_health);
+				PrintHintText(attacker, "%t", "Show damage hit message body", S_hitgroup_message, damage_health, damage_armor);
 			}
 			else
 			{
-				PrintHintText(attacker, "%t", "Show damage hit message", victim, damage_health);
+				PrintHintText(attacker, "%t", "Show damage hit message", damage_health, damage_armor);
 			}
 		}
 	}

@@ -6,7 +6,7 @@ Will show the damage on the Center and HUD (corner).
 - The time ***(reset)*** between each kill is set by type of weapons ***(pistols, snipers, rifles...)*** and this timer can be set with cvars;
 
 ## Commands
-- `sm_sd` - For the clients preferences;
+- `sm_sd` , `sm_showdamage` - For the clients preferences;
 
 ## Cvars
 - `show_damage_sniper_time` - SNIPERS Time Between shots;

@@ -112,6 +112,7 @@ public void OnPluginStart()
 	
 	RegAdminCmd("sm_array", Command_Array, ADMFLAG_CHANGEMAP, "");	
 	RegConsoleCmd("sm_sd", Command_BuildMenuShowDamage, "");
+	RegConsoleCmd("sm_showdamage", Command_BuildMenuShowDamage, "");
 	
 	Cookie_ShowDamage = RegClientCookie("Cookie_ShowDamage", "", CookieAccess_Private);
 	Cookie_ShowDamageType = RegClientCookie("Cookie_ShowDamageType", "", CookieAccess_Private);

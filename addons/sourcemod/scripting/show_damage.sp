@@ -738,7 +738,7 @@ void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count
 			}
 		}
 		
-		if(Client_IsIngame(attacker) && Client_IsIngame(victim) && attacker != victim && GetClientTeam(attacker) != GetClientTeam(victim))
+		if(Client_IsIngame(attacker) && Client_IsIngame(victim) && attacker != victim)
 		{
 			if(strlen(S_hitgroup_message))
 			{

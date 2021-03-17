@@ -659,7 +659,7 @@ public Action TimerData_ShowDamage(Handle timer, Handle dataPackHandle)
 /***********************************************************/
 void ShowDamageHud(int attacker, int victim, int damage_health, int health)
 {
-	SetHudTextParams(0.02, 0.05, 5.0, 255, 0, 0, 255, 1, 1.0, 0.5, 0.5);
+	SetHudTextParams(0.019, 0.045, 5.0, 255, 0, 0, 255);
 	ShowHudText(attacker, 1, " %N\n Damage: %i\n HP: %i", victim, damage_health, health);
 	
 	Timer_ShowDamage[attacker] = INVALID_HANDLE;
@@ -746,7 +746,7 @@ void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count
 			}
 			else
 			{
-				PrintHintText(attacker, "%t", "Show damage hit message", damage_health, damage_armor);
+				PrintHintText(attacker, "%t", "Show damage hit message", victim, damage_health);
 			}
 		}
 	}

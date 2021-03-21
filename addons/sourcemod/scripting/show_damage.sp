@@ -37,8 +37,8 @@ Handle cvar_show_damage_pump_time;
 Handle cvar_show_damage_pistol_time;
 
 Handle Array_Victim[MAXPLAYERS + 1];
-Handle Cookie_ShowDamage;
-Handle Cookie_ShowDamageType;
+Handle Cookie_ShowDamage = INVALID_HANDLE;
+Handle Cookie_ShowDamageType = INVALID_HANDLE;
 
 Handle Timer_ShowDamage[MAXPLAYERS + 1];
 
@@ -69,8 +69,8 @@ char S_showdamagesteamid[MAX_TYPE_WEAPONS][MAX_SHOW_DAMAGE_STEAMID][64];
 int C_CountVictim[MAXPLAYERS + 1]	= 1;
 int C_TotalDamage[MAXPLAYERS + 1];
 int C_TotalDamageArmor[MAXPLAYERS + 1];
-C_ShowDamage[MAXPLAYERS + 1];
-C_ShowDamageType[MAXPLAYERS + 1];
+int C_ShowDamage[MAXPLAYERS + 1];
+int C_ShowDamageType[MAXPLAYERS + 1];
 
 int max_type_weapons;
 int max_show_damage_steamid[MAX_SHOW_DAMAGE_STEAMID];
@@ -229,23 +229,26 @@ public void OnClientCookiesCached(int client)
 	char value2[16];
 	
 	GetClientCookie(client, Cookie_ShowDamage, value, sizeof(value));
-	if(strlen(value) > 0) 
+	GetClientCookie(client, Cookie_ShowDamageType, value2, sizeof(value2));
+	
+	if(value[0] == '\0')
+	{
+		SetClientCookie(client, Cookie_ShowDamage, "1");
+		C_ShowDamage[client] = 1;
+	}
+	else 
 	{
 		C_ShowDamage[client] = StringToInt(value);
 	}
-	else 
+	
+	if(value2[0] == '\0')
 	{
-		C_ShowDamage[client] = 1;
+		SetClientCookie(client, Cookie_ShowDamageType, "1");
+		C_ShowDamageType[client] = 1;
 	}
-
-	GetClientCookie(client, Cookie_ShowDamageType, value2, sizeof(value2));
-	if(strlen(value2) > 0) 
+	else 
 	{
 		C_ShowDamageType[client] = StringToInt(value2);
-	}
-	else 
-	{
-		C_ShowDamageType[client] = 1;
 	}
 }
 

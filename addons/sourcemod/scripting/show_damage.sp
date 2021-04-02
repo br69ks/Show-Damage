@@ -684,15 +684,15 @@ void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count
 	{
 		if(StrEqual(weapon, "inferno", false))
 		{
-			PrintHintText(attacker, "%t", "Show damage inferno", count, damage_health);
+			PrintHintText(attacker, "%t", "Show damage inferno", count, damage_health, damage_armor);
 		}
 		else if(StrEqual(weapon, "hegrenade", false))
 		{
-			PrintHintText(attacker, "%t", "Show damage hegrenade", count, damage_health);
+			PrintHintText(attacker, "%t", "Show damage hegrenade", count, damage_health, damage_armor);
 		}
 		else
 		{
-			PrintHintText(attacker, "%t", "Show damage multiple", weapon, count, damage_health);
+			PrintHintText(attacker, "%t", "Show damage multiple", weapon, count, damage_health, damage_armor);
 		}
 	}
 	else
@@ -749,7 +749,7 @@ void ShowDamage(char[] weapon, int attacker, int victim, int hitgroup, int count
 			}
 			else
 			{
-				PrintHintText(attacker, "%t", "Show damage hit message", victim, damage_health);
+				PrintHintText(attacker, "%t", "Show damage hit message", damage_health, damage_armor);
 			}
 		}
 	}

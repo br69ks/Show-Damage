@@ -115,13 +115,13 @@ void BuildMenuShowDamage(int client)
 	
 	Menu menu = new Menu(MenuShowDamageAction);
 	
-	Format(buffer, sizeof(buffer), "%T", "Menu Title");
+	Format(buffer, sizeof(buffer), "%T", "Menu Title", client);
 	menu.SetTitle(buffer);
 	
-	Format(buffer, sizeof(buffer), "%T", "Option 1", C_ShowDamage[client] ? "Enabled" : "Disabled");
+	Format(buffer, sizeof(buffer), "%T", "Option 1", client, C_ShowDamage[client] ? "Enabled" : "Disabled");
 	menu.AddItem("1", buffer);
 	
-	Format(buffer, sizeof(buffer), "%T", "Option 2", C_ShowDamageType[client] ? "Center" : "HUD");
+	Format(buffer, sizeof(buffer), "%T", "Option 2", client, C_ShowDamageType[client] ? "Center" : "HUD");
 	if (C_ShowDamage[client] == 1)
 		menu.AddItem("2", buffer);
 		
@@ -209,7 +209,6 @@ public Action Event_PlayerHurt(Event event, char[] name, bool dontBroadcast)
 		C_TotalDamageArmor[attacker] 	+= damage_armor;
 			
 		DataPack pack;
-		KillTimer(Timer_ShowDamage[attacker]);
 		Timer_ShowDamage[attacker] = CreateDataTimer(0.01, TimerData_ShowDamage, pack);
 		pack.WriteString(S_weapon);
 		pack.WriteCell(attacker);
@@ -233,8 +232,6 @@ public Action TimerData_ShowDamage(Handle timer, DataPack pack)
 	int victim 			= pack.ReadCell();
 	int hitgroup 		= pack.ReadCell();
 	int health 			= pack.ReadCell();
-	
-	Timer_ShowDamage[attacker] = INVALID_HANDLE;
 	
 	switch (C_ShowDamageType[attacker])
 	{

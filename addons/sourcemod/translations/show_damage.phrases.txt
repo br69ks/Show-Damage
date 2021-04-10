@@ -6,182 +6,174 @@
 
 "Phrases"
 {
-	"Show damage menu settings"
-	{
-		"en"			"Menu: Show Damage"
-		"pt"			"Menu: Show Damage"
-		"fr"			"Menu: Affichage des Dommages"
-		"tr"			"Menü: Hasarı Göster"
-		"ru"			"Menu: Отображения нанесенного урона"
-	}
-	"Show damage menu settings message"
-	{
-		"#format"		"{1:s}"
-		"en"			"Show Damage: {1}"
-		"pt"			"Show Damage: {1}"
-		"fr"			"Affichage des Dommages: {1}"
-		"tr"			"Hasarı Göster: {1}"
-		"ru"			"Нанесенный урон: {1}"
-	}
-	"Show damage menu settings message 2"
-	{
-		"#format"		"{1:s}"
-		"en"			"Damage Type: {1}"
-		"pt"			"Damage Type: {1}"
-		"fr"			"Type de dommage: {1}"
-		"tr"			"Hasar Tipi: {1}"
-		"ru"			"Тип повреждения: {1}"
-	}
 	"Head"
 	{
-        "en"			"Head"
+        	"en"			"Head"
 		"pt"			"Cabeça"
 		"fr"			"Tête"
 		"tr"			"Kafa"
 		"ru"			"Голова"
 	}
+
 	"Chest"
 	{
-       	"en"			"Chest"
+       		"en"			"Chest"
 		"pt"			"Peito"
 		"fr"			"Poitrine"
 		"tr"			"Gövde"
 		"ru"			"Грудь"
 	}
+
 	"Stomach"
 	{
-       	"en"			"Stomach"
+       		"en"			"Stomach"
 		"pt"			"Estômago"
 		"fr"			"Ventre"
 		"tr"			"Karın"
 		"ru"			"Желудок"
 	}
+
 	"Left arm"
 	{
-       	"en"			"Left arm"
+       		"en"			"Left arm"
 		"pt"			"Braço esquerdo"
 		"fr"			"Bras gauche"
 		"tr"			"Sol el"
 		"ru"			"Левая рука"
 	}
+
 	"Right arm"
 	{
-       	"en"			"Right arm"
+       		"en"			"Right arm"
 		"pt"			"Braço direito"
 		"fr"			"Bras droit"
 		"tr"			"Sağ el"
 		"ru"			"Правая рука"
 	}
+
 	"Left leg"
 	{
-       	"en"			"Left leg"
+       		"en"			"Left leg"
 		"pt"			"Perna esquerda"
 		"fr"			"Jambe gauche"
 		"tr"			"Sol ayak"
 		"ru"			"Левая нога"
 	}
+
 	"Right leg"
 	{
-      	"en"			"Right leg"
+      		"en"			"Right leg"
 		"pt"			"Perna direita"
 		"fr"			"Jambe droite"
 		"tr"			"Sağ ayak"
 		"ru"			"Правая нога"
 	}
+
 	"Enabled"
 	{
-      	"en"			"Enabled"
+      		"en"			"Enabled"
 		"pt"			"Ativado"
 		"fr"			"Activé"
 		"tr"			"Açık"
 		"ru"			"Включено"
 	}
+
 	"Disabled"
 	{
-      	"en"			"Disabled"
+      		"en"			"Disabled"
 		"pt"			"Desativado"
 		"fr"			"Désactivé"
 		"tr"			"Kapalı"
 		"ru"			"Выключено"
 	}
+
 	"Center"
 	{
-      	"en"			"Center"
+      		"en"			"Center"
 		"pt"			"Centro"
 		"fr"			"Centre"
 		"tr"			"Merkez"
 		"ru"			"Центр"
 	}
+
 	"HUD"
 	{
-      	"en"			"HUD"
+      		"en"			"HUD"
 	}
-	"ShowDamage_TITLE"
+
+	"Menu Title"
 	{
-      	"en"			"Menu: Show Damage"
+      		"en"			"Menu: Show Damage"
 		"pt"			"Menu: Show Damage"
 		"fr"			"Menu: Notifications des Dommages"
 		"tr"			"Menu: Show Damage"
 		"ru"			"Menu: Нанесенный урон"
-	}	
-	"ShowDamage_HUD_MENU_TITLE"
+	}
+	
+	"Option 1"
 	{
-		"#format"		"{1:s}"
-      	"en"			"Show Damage: {1}"
+		"#format"		"{1:t}"
+      		"en"			"Show Damage: {1}"
 		"pt"			"Show Damage: {1}"
 		"fr"			"Montrer les Dommages: {1}"
 		"tr"			"Hasarı Göster: {1}"
 		"ru"			"Нанесенный урон: {1}"
 	}
-	"ShowDamage_HUD_MENU_TITLE_2"
+
+	"Option 2"
 	{
-		"#format"		"{1:s}"
+		"#format"		"{1:t}"
 		"en"			"Damage Type: {1}"
 		"pt"			"Damage Type: {1}"
 		"fr"			"Type de dommage: {1}"
 		"tr"			"Hasar Tipi: {1}"
 		"ru"			"Тип повреждения: {1}"
 	}
+
 	"Show damage hit message body"
 	{
 		"#format"		"{1:s},{2:i},{3:i}"
-       	"en"			"<font color='#993300'>{1}</font>.\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
+       		"en"			"<font color='#993300'>{1}</font>.\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
 		"pt"			"<font color='#993300'>{1}</font>.\nVida: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
 		"fr"			"<font color='#993300'>{1}</font>.\nVie: <font color='#336600'>-{2}</font> | Armure: <font color='#0066CC'>-{3}</font>"
 		"tr"			"<font color='#993300'>{1}</font>.\nCan: <font color='#336600'>-{2}</font> | Zırh: <font color='#0066CC'>-{3}</font>"
 		"ru"			"<font color='#993300'>{1}</font>.\nЗдоровье: <font color='#336600'>-{2}</font> | Броня: <font color='#0066CC'>-{3}</font>"
-	}	
+	}
+	
 	"Show damage hit message"
 	{
 		"#format"		"{1:i},{2:i}"
-       	"en"			"Health: <font color='#336600'>-{1}</font> | Armor: <font color='#0066CC'>-{2}</font>"
+       		"en"			"Health: <font color='#336600'>-{1}</font> | Armor: <font color='#0066CC'>-{2}</font>"
 		"pt"			"Vida: <font color='#336600'>-{1}</font> | Colete: <font color='#0066CC'>-{2}</font>"
 		"fr"			"Vie: <font color='#336600'>-{1}</font> | Armure: <font color='#0066CC'>-{2}</font>"
 		"tr"			"Can: <font color='#336600'>-{1}</font> | Zırh: <font color='#0066CC'>-{2}</font>"
 		"ru"			"Здоровье: <font color='#336600'>-{1}</font> | Броня: <font color='#0066CC'>-{2}</font>"
 	}	
+
 	"Show damage inferno"
 	{
 		"#format"		"{1:i},{2:i},{3:i}"
-       	"en"			"Total <font color='#993300'>Molotov</font> damage\nVictims: <font color='#800000'>{1}</font>\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
+       		"en"			"Total <font color='#993300'>Molotov</font> damage\nVictims: <font color='#800000'>{1}</font>\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
 		"pt"			"Total <font color='#993300'>Molotov</font> damage\nVítimas: <font color='#800000'>{1}</font>\nVida: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
 		"fr"			"Total des dommages de la <font color='#993300'>Molotov</font>\nVictimes: <font color='#800000'>{1}</font>\nVie: <font color='#336600'>-{2}</font> | Armure: <font color='#0066CC'>-{3}</font>"
 		"tr"			"Toplam <font color='#993300'>Molotof</font> hasarı\nEtkilenenler: <font color='#800000'>{1}</font>\nCan: <font color='#336600'>-{2}</font> | Zırh: <font color='#0066CC'>-{3}</font>"
 		"ru"			"Всего <font color='#993300'>молотов</font> нанес урона\nЖертв: <font color='#800000'>{1}</font>\nЗдоровье: <font color='#336600'>-{2}</font> | Броня: <font color='#0066CC'>-{3}</font>"
 	}
+
 	"Show damage hegrenade"
 	{
 		"#format"		"{1:i},{2:i},{3:i}"
-       	"en"			"Total <font color='#993300'>HE Grenade</font> damage\nVictims: <font color='#800000'>{1}</font>\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
+       		"en"			"Total <font color='#993300'>HE Grenade</font> damage\nVictims: <font color='#800000'>{1}</font>\nHealth: <font color='#336600'>-{2}</font> | Armor: <font color='#0066CC'>-{3}</font>"
 		"pt"			"Total <font color='#993300'>HE Granada</font> damage\nVítimas: <font color='#800000'>{1}</font>\nVida: <font color='#336600'>-{2}</font> | Colete: <font color='#0066CC'>-{3}</font>"
 		"fr"			"Total des dommages de la <font color='#993300'>Grenade</font>\nVictimes: <font color='#800000'>{1}</font>\nVie: <font color='#336600'>-{2}</font> | Armure: <font color='#0066CC'>-{3}</font>"
 		"tr"			"Toplam <font color='#993300'>El Bombası</font> hasar\nEtkilenenler: <font color='#800000'>{1}</font>\nCan: <font color='#336600'>-{2}</font> | Zırh: <font color='#0066CC'>-{3}</font>"
 		"ru"			"Всего <font color='#993300'>граната</font> нанесла урона\nЖертв: <font color='#800000'>{1}</font>\nЗдоровье: <font color='#336600'>-{2}</font> | Броня: <font color='#0066CC'>-{3}</font>"
-	}	
+	}
+	
 	"Show damage multiple"
 	{
 		"#format"		"{1:s},{2:i},{3:i},{4:i}"
-       	"en"			"Total <font color='#993300'>{1}</font> Damage\nVictims: <font color='#800000'>{2}</font>\nHealth: <font color='#336600'>-{3}</font> | Armor: <font color='#0066CC'>-{4}</font>"
+       		"en"			"Total <font color='#993300'>{1}</font> Damage\nVictims: <font color='#800000'>{2}</font>\nHealth: <font color='#336600'>-{3}</font> | Armor: <font color='#0066CC'>-{4}</font>"
 		"pt"			"Dano <font color='#993300'>{1}</font> Total\nVítimas: <font color='#800000'>{2}</font>\nVida: <font color='#336600'>-{3}</font> | Colete: <font color='#0066CC'>-{4}</font>"
 		"fr"			"Total des dommages <font color='#993300'>{1}</font>\nVictimes: <font color='#800000'>{2}</font>\nVie: <font color='#336600'>-{3}</font> |  Armure: <font color='#0066CC'>-{4}</font>"
 		"tr"			"Toplam <font color='#993300'>{1}</font> Hasar\nEtkilenenler: <font color='#800000'>{2}</font>\nCan: <font color='#336600'>-{3}</font> | Zırh: <font color='#0066CC'>-{4}</font>"
